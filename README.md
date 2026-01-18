@@ -1,5 +1,3 @@
-# MonitorPZiSi
-
 # Aplikacja Monitorująca Równowagę Pracy i Życia
 
 ## Opis projektu
@@ -127,6 +125,6 @@ Możliwe rozszerzenia aplikacji:
 - Wykorzystanie AI do dokładniejszej analizy postawy
 
 ## Autor
-Przemysław Porębski
+
 Projekt wykonany w ramach przedmiotu "Problemy społeczne i zawodowe informatyki"
 

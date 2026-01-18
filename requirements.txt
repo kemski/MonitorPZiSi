@@ -1,0 +1,13 @@
+#framework webowy
+Flask>=3.0.0
+#do Routingu
+Werkzeug>=3.0.0
+#Do przetwarzania obrazu, rozróniania postawy na zdjęciach
+opencv-python>=4.8.0
+#Do obliczeń matematycznych, potrzebnych do analizy pozstawy:
+numpy>=1.26.0
+#Obsługa obrazów w Pythonie:
+Pillow>=10.0.0
+#analiza aktywności komputera
+psutil>=5.9.0
+python-dateutil>=2.8.0

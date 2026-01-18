@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Równowagi Pracy i Życia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Sticky zegar z przyciskami -->
+    <div class="sticky-timer" id="sticky-timer">
+        <div class="timer-display" id="timer-display">00:00</div>
+        <div class="timer-controls">
+            <button id="pomodoro-btn" class="timer-btn" title="Pomodoro (25 min)">
+                🍅
+            </button>
+            <button id="break-btn" class="timer-btn" title="Przerwa (5 min)">
+                ☕
+            </button>
+            <button id="play-btn" class="timer-btn" title="Start">
+                ▶
+            </button>
+            <button id="pause-btn" class="timer-btn" title="Pauza">
+                ⏸
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>💻 Monitor Równowagi Pracy i Życia</h1>
+            <p class="subtitle">Aplikacja wspierająca zdrową pracę przy komputerze</p>
+        </header>
+
+        <main>
+            <!-- Sekcja analizy postawy - NA GÓRZE -->
+            <section class="card" id="posture-analysis">
+                <h2>🪑 Analiza Postawy</h2>
+                <p class="section-description">Prześlij zdjęcie swojego stanowiska z boku, aby zweryfikować postawę siedzącą.</p>
+                
+                <div class="upload-section">
+                    <input type="file" id="posture-image-input" accept="image/*" style="display: none;">
+                    <button id="upload-btn" class="btn btn-primary">Wybierz Zdjęcie</button>
+                    <span id="file-name" class="file-name"></span>
+                </div>
+
+                <div id="upload-preview" class="upload-preview" style="display: none;">
+                    <img id="preview-image" src="" alt="Podgląd zdjęcia">
+                    <button id="analyze-btn" class="btn btn-success">Przeanalizuj Postawę</button>
+                </div>
+
+                <div id="analysis-results" class="analysis-results" style="display: none;">
+                    <!-- Wyniki analizy będą wyświetlone tutaj -->
+                </div>
+            </section>
+
+            <!-- Sekcja ćwiczeń -->
+            <section class="card" id="exercises">
+                <h2>🏃 Ćwiczenia Fizyczne</h2>
+                <p class="section-description">Wybierz ćwiczenie do wykonania podczas przerwy:</p>
+                <div class="exercises-grid" id="exercises-grid">
+                    <!-- Ćwiczenia będą załadowane dynamicznie -->
+                </div>
+            </section>
+
+            <!-- Modal z szczegółami ćwiczenia -->
+            <div id="exercise-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="exercise-details">
+                        <!-- Szczegóły ćwiczenia będą załadowane dynamicznie -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sekcja sugestii ergonomicznych -->
+            <section class="card" id="ergonomic-suggestions">
+                <h2>📋 Sugestie Ergonomiczne</h2>
+                <p class="section-description">Ogólne wytyczne dotyczące prawidłowego ustawienia stanowiska pracy:</p>
+                <div id="suggestions-list">
+                    <!-- Sugestie będą załadowane dynamicznie -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Projekt edukacyjny - Problemy społeczne i zawodowe informatyki</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
