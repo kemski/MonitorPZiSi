@@ -12,4 +12,3 @@ Pillow>=10.0.0
 #analiza aktywności komputera
 psutil>=5.9.0
 python-dateutil>=2.8.0
-python-dateutil>=2.8.0
